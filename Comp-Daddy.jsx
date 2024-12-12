@@ -31,7 +31,7 @@ frameRateDropDown.onChange = function(){
   frameRateInput.text = rate;
 }
 
-frameRateBtn.onClick = function (){
+frameRateBtn.onClick = function(){
   var selected = app.project.selection;
   for (i=0; i<=selected.length; i++){
     selected[i].frameRate = frameRateInput.text;
@@ -41,6 +41,11 @@ frameRateBtn.onClick = function (){
 durationBtn.onClick = function(){
   var selected = app.project.selection;
   var timeCode = durationInput.text;
+  var checkHourArray = timeCode.split(":");
+  var checkHourInput = checkHourArray[0];
+  if (checkHourInput>2){
+    alert("Hour value can be no greater than 2, Please Adjust and retry");
+  }
   for(i=0; i<= selected.length; i++){
     var compFrameRate = selected[i].frameRate;
     var secs = convertTimeCodeToSeconds(timeCode, compFrameRate);
@@ -57,7 +62,6 @@ function convertTimeCodeToSeconds(timeString, framerate)
   var seconds = parseInt(timeArray[2]);
   var frames  = parseInt(timeArray[3])*(1/framerate);
   var totalTime = hours + minutes + seconds + frames;
-
   //alert(timeString + " = " + totalTime)
   return totalTime;
 }
