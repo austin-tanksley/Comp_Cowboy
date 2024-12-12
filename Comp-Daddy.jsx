@@ -42,9 +42,9 @@ durationBtn.onClick = function(){
   var selected = app.project.selection;
   var timeCode = durationInput.text;
   var checkHourArray = timeCode.split(":");
-  var checkHourInput = checkHourArray[0];
+  var checkHourInput = parseInt(checkHourArray[0]);
   if (checkHourInput>2){
-    alert("Hour value can be no greater than 2, Please Adjust and retry");
+    alert("Hour value can be no greater than 2, Please adjust and retry");
   }
   for(i=0; i<= selected.length; i++){
     var compFrameRate = selected[i].frameRate;
