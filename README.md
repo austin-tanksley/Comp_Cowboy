@@ -1,9 +1,9 @@
-# Comp Cowboy
+# Comp Helper
 After Effects script that enables editing of composition settings on multiple selected compositions
 
 ## INSTALLATION
 ---
-Place Comp-Cowboy.jsx in .../Adobe/Adobe After Effects "Version Number" /Support Files/Scripts.
+Place Comp-Helper.jsx in .../Adobe/Adobe After Effects "Version Number" /Support Files/Scripts.
 
 To check that the script installed properly, open of any After Effects project, or create a new one. Once opened, navigate to File>Scripts and click on Comp-Cowboy. A window should pop up in the center of the screen.
 
